@@ -59,6 +59,10 @@ const EmployeeForm = ({
     },
   });
 
+  const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
   // Reset form when editing employee changes
   useEffect(() => {
     if (editingEmployee) {
@@ -104,8 +108,8 @@ const EmployeeForm = ({
             description: "Attempting to send email via EmailJS",
           });
           await emailjs.send(
-            "service_e1ibiba",
-            "template_v5nu5mo",
+            SERVICE_ID,
+            TEMPLATE_ID,
             {
               name: data.name,
               email: data.email,
@@ -114,7 +118,7 @@ const EmployeeForm = ({
               message: "A new employee has been added.",
               time: new Date().toLocaleString(),
             },
-            "2B2QIfEyzFBJrSdk7"
+            PUBLIC_KEY
           );
 
           console.log("✅ Email sent via EmailJS");
