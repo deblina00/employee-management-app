@@ -152,7 +152,7 @@ const EmployeeGrid = ({ employees, onEdit, onDelete }: EmployeeGridProps) => {
       <Card className="w-full">
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
-            Employee Directory
+            Dashboard
             <Badge variant="secondary" className="text-sm">
               {employees.length}{" "}
               {employees.length === 1 ? "Employee" : "Employees"}
