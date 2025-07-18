@@ -156,7 +156,9 @@ const EmployeeForm = ({
     <Card className="w-full max-w-2xl">
       <CardHeader>
         <CardTitle className="flex items-center justify-between">
-          {editingEmployee ? "Edit Employee" : "Add New Employee"}
+          <span className="bg-gradient-to-r from-[#36D1DC] to-[#09245f] dark:from-[#F8FF00] dark:to-[#3AD59F] bg-clip-text text-transparent">
+            {editingEmployee ? "Edit Employee" : "Add New Employee"}
+          </span>
           {editingEmployee && onCancel && (
             <Button variant="ghost" size="sm" onClick={handleCancel}>
               <X className="h-4 w-4" />
@@ -285,7 +287,11 @@ const EmployeeForm = ({
             />
 
             <div className="flex gap-2">
-              <Button type="submit" className="flex-1" disabled={isSubmitting}>
+              <Button
+                type="submit"
+                className="flex-1 bg-gradient-to-r from-[#36D1DC] to-[#09245f] dark:from-[#F8FF00] dark:to-[#3AD59F] dark:text-black hover:opacity-90 transition"
+                disabled={isSubmitting}
+              >
                 {isSubmitting ? (
                   <>
                     <div className="mr-2 h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />

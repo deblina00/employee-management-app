@@ -1,15 +1,17 @@
-import { Users, Github, Twitter, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { GradientGithubIcon, GradientLinkedinIcon, GradientTwitterIcon, GradientUsersIcon } from "./icons/GradientIcons";
 
 export function Footer() {
   return (
-    <footer className="bg-muted/50 border-t">
+    <footer className="bg-[#f1f3f5] dark:bg-muted/50 border-t">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <Users className="h-6 w-6 text-primary" />
-              <span className="text-xl font-bold">EmployeeHub</span>
+              <GradientUsersIcon className="h-6 w-6 text-primary" />
+              <span className="text-xl font-bold bg-gradient-to-r from-[#36D1DC] to-[#09245f] dark:from-[#F8FF00] dark:to-[#3AD59F] bg-clip-text text-transparent">
+                EmployeeHub
+              </span>
             </div>
             <p className="text-muted-foreground text-sm">
               Simplifying employee management for businesses of all sizes.
@@ -71,13 +73,13 @@ export function Footer() {
             <h3 className="font-semibold mb-4">Connect</h3>
             <div className="flex space-x-2">
               <Button variant="ghost" size="icon">
-                <Github className="h-4 w-4" />
+                <GradientGithubIcon className="h-4 w-4" />
               </Button>
               <Button variant="ghost" size="icon">
-                <Twitter className="h-4 w-4" />
+                <GradientTwitterIcon className="h-4 w-4" />
               </Button>
               <Button variant="ghost" size="icon">
-                <Linkedin className="h-4 w-4" />
+                <GradientLinkedinIcon className="h-4 w-4" />
               </Button>
             </div>
           </div>

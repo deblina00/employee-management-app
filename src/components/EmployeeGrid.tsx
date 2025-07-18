@@ -152,7 +152,9 @@ const EmployeeGrid = ({ employees, onEdit, onDelete }: EmployeeGridProps) => {
       <Card className="w-full">
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
-            Dashboard
+            <span className="bg-gradient-to-r from-[#36D1DC] to-[#09245f] dark:from-[#F8FF00] dark:to-[#3AD59F] bg-clip-text text-transparent">
+              Dashboard
+            </span>
             <Badge variant="secondary" className="text-sm">
               {employees.length}{" "}
               {employees.length === 1 ? "Employee" : "Employees"}
